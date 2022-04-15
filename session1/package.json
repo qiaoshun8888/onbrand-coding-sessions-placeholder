@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node index.js",
-    "start-dev": "yarn run dev:BE && yarn run dev:FE",
     "dev:BE": "node index.js",
-    "dev:FE": "cd frontend; PUBLIC_URL=/ccs PORT=3001 SKIP_PREFLIGHT_CHECK=true BROWSER=none react-scripts start; cd ..",
+    "dev:FE": "cd frontend; PORT=3001 SKIP_PREFLIGHT_CHECK=true BROWSER=none react-scripts start; cd ..",
     "install:all": "yarn install && cd frontend; yarn install; cd ..",
-    "build": "cd frontend; PUBLIC_URL=/ccs SKIP_PREFLIGHT_CHECK=true react-scripts build; rimraf build/**/*.map; cd ..",
+    "build": "cd frontend; SKIP_PREFLIGHT_CHECK=true react-scripts build; rimraf build/**/*.map; cd ..",
     "eject": "react-scripts eject"
   },
   "dependencies": {
